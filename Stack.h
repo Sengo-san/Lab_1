@@ -28,10 +28,6 @@ private:
 template <class T> void Stack<T>::Push(const T &value)
 {
     Node* new_node = new Node {value, top};
-    if (new_node == nullptr){
-        throw EStackOverflow();
-    }
-
     top = new_node;
     size ++;
 }
