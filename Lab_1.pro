@@ -17,4 +17,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     ../../Desktop/Учеба/Разработка ПО 6сем/Tikhomirov_931920/stack.h \
+    EStackEmpty.h \
+    EStackExeption.h \
     Stack.h
