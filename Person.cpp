@@ -2,13 +2,20 @@
 
 Person::Person() {}
 
-Person::Person (std::string _first_name, std::string _last_name, std::string _patronymic)
+Person::Person (std::string _last_name, std::string _first_name, std::string _patronymic)
 {
-
-    first_name = _first_name;
     last_name = _last_name;
+    first_name = _first_name;
     patronymic = _patronymic;
 }
+
+ Person::Person(const Person& p)
+ {
+     first_name = p.first_name;
+     last_name = p.last_name;
+     patronymic = p.patronymic;
+     key = p.key;
+ }
 
 void Person::setFirstame(const std::string & _first_name)
 {

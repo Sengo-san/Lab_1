@@ -10,8 +10,8 @@ class PersonKeeper
 {
 public:
     static PersonKeeper& Instance();
-    void /*Stack <Person>*/ readPersons (std::ifstream); //читает из потока (файла)
-    void writePersons (); //записывает в поток из стека
+    void  readPersons(std::ifstream&); //читает из потока (файла)
+    void writePersons (std::ofstream&); //записывает в поток из стека
 
 private:
     PersonKeeper();

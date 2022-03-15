@@ -26,4 +26,5 @@ HEADERS += \
     Stack.h
 
 DISTFILES += \
-    File.txt
+    Name_Reciever.txt \
+    Name_Source.txt

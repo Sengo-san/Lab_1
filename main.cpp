@@ -20,24 +20,20 @@ void readfile (ifstream& tmp)
 
 
 int main(int argc, char *argv[])
-{/*
-    //QCoreApplication a(argc, argv);
+{
+    //Считываем из файла
+    ifstream instr ("C:\\Users/tikho/Documents/Lab_1/Name_Source.txt"); //Пока не разобрался с открытием файлов не на локальной машине, "File.txt" не видит
+    if (!instr) cout << "error";
+    PersonKeeper::Instance().readPersons(instr);
+    instr.close();
 
-    string str1 = "Ivan";
-    string str2 = "Igor";
-    Stack <string> names;
-    names.Push(str1);
-    names.Push(str2);
-    cout<<names.Size()<<endl;
-    cout << names.Pop() << endl;
-    cout << names.Pop() << endl;
-    cout << names.Pop() << endl;
-*/
+    //Записываем в файл
+    ofstream outstr ("C:\\Users/tikho/Documents/Lab_1/Name_Reciever.txt");
+    PersonKeeper::Instance().writePersons(outstr);
+    outstr.close();
 
-    ifstream potok ("C:\\Users/tikho/Documents/Lab_1/File.txt");
-    if (!potok) cout<<"errr";
 
-    readfile (potok);
+    return 0;
+    //a.exec();
 
-    return 0; //a.exec();
 }
